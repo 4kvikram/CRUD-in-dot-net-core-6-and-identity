@@ -1,1 +1,28 @@
-﻿Welcome 
+﻿@model List<Employee>
+<h1>Welcome</h1>
+
+
+<table class="row-border" id="sampletable" border=1>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="tblhead">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+                <td></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
